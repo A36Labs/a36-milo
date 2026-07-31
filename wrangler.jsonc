@@ -20,7 +20,7 @@
     ]
   },
 
-  // Replace this placeholder before enabling GitHub deployment.
+  // Production A36 Milo KV namespace binding.
   "kv_namespaces": [
     {
       "binding": "MILO_KV",
