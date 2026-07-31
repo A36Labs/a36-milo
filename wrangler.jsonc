@@ -1,0 +1,53 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+
+  // Cloudflare Worker
+  "name": "a36-milo",
+  "main": "worker.js",
+
+  // Matches the compatibility date currently used by the production Worker.
+  "compatibility_date": "2026-07-31",
+
+  // Keep the existing variables configured in the Cloudflare dashboard.
+  // This prevents GitHub/Wrangler deployments from replacing them.
+  "keep_vars": true,
+
+  // Keep the public workers.dev URL and preview deployments enabled.
+  "workers_dev": true,
+  "preview_urls": true,
+
+  // Milo checks once every hour for scheduled prompts and observances.
+  // The Worker does not post every hour; it posts only when content is due.
+  "triggers": {
+    "crons": [
+      "30 * * * *"
+    ]
+  },
+
+  // Existing Cloudflare Workers KV namespace.
+  // Replace the placeholder with the ID of the existing a36-milo-data namespace
+  // before enabling automatic GitHub deployment.
+  "kv_namespaces": [
+    {
+      "binding": "MILO_KV",
+      "id": "REPLACE_WITH_A36_MILO_DATA_KV_NAMESPACE_ID"
+    }
+  ],
+
+  // Wrangler verifies that these encrypted secrets exist before deployment.
+  // Never place the actual secret values in this file.
+  "secrets": {
+    "required": [
+      "TELE36-milo-data namespace
+  // before enabling automaticGRAM_BOT_TOKEN",
+      "TELEGRAM_WEBHOOK_SECRET",
+      "GEMINI_API_KEY"
+    ]
+  },
+
+  // Persist Worker logs in the Cloudflare dashboard.
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  }
+}
