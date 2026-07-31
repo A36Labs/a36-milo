@@ -1,0 +1,216 @@
+name: Feature request
+description: Suggest a new feature or improvement for A36 Milo
+title: "[Feature]: "
+labels:
+  - enhancement
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve A36 Milo.
+
+        Before submitting, search existing issues and pull requests to avoid duplicate suggestions.
+
+        Please explain the problem before proposing a solution. Features should support Milo’s purpose as a useful, safe and community-friendly AI community manager.
+
+        For security vulnerabilities, do not use this form. Follow SECURITY.md instead.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: What problem would this feature solve?
+      placeholder: |
+        Describe the problem, limitation or opportunity.
+
+        Example:
+        Community administrators currently cannot...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: Explain how you think the feature should work.
+      placeholder: |
+        Describe the proposed behaviour, workflow or interface.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Feature area
+      description: Select the main part of Milo this feature affects.
+      options:
+        - AI conversations
+        - Community engagement
+        - Telegram commands
+        - Telegram moderation
+        - Multilingual support
+        - Conversation memory
+        - A36 knowledge
+        - Administrator controls
+        - Scheduled prompts
+        - Holidays and observances
+        - Message reactions
+        - Community onboarding
+        - Privacy and security
+        - Cloudflare Workers
+        - Cloudflare Workers KV
+        - Gemini integration
+        - Alternative AI provider
+        - Analytics or reporting
+        - Deployment workflow
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: users
+    attributes:
+      label: Who would benefit?
+      description: Select the main users who would benefit from this feature.
+      multiple: true
+      options:
+        - Community members
+        - Community administrators
+        - Developers
+        - Open-source contributors
+        - Startup communities
+        - University communities
+        - Event communities
+        - A36 Labs maintainers
+        - Self-hosted Milo operators
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Example user experience
+      description: Show how a member or administrator might use the feature.
+      placeholder: |
+        Example:
+
+        Member: Can someone summarize today’s discussion?
+
+        Milo: Here are the main topics discussed today...
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Describe any alternative solutions or workarounds you considered.
+      placeholder: Explain other approaches that may solve the same problem.
+
+  - type: textarea
+    id: telegram
+    attributes:
+      label: Telegram requirements
+      description: Mention any Telegram permissions, commands, buttons, reactions or Bot API features required.
+      placeholder: |
+        Example:
+        This feature may require permission to delete messages or create invite links.
+
+  - type: textarea
+    id: infrastructure
+    attributes:
+      label: Infrastructure requirements
+      description: Explain whether the feature requires new Cloudflare, KV, Gemini or external services.
+      placeholder: |
+        Example:
+        This may require an additional KV key and one scheduled Worker invocation per day.
+
+  - type: dropdown
+    id: cost
+    attributes:
+      label: Expected cost impact
+      description: Could this feature increase AI, API, storage or infrastructure usage?
+      options:
+        - No expected additional cost
+        - Small increase
+        - Moderate increase
+        - Significant increase
+        - Unknown
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: Possible impact
+      description: Select all areas that may be affected.
+      options:
+        - label: AI response quality
+        - label: AI usage limits
+        - label: Telegram permissions
+        - label: Member privacy
+        - label: Conversation storage
+        - label: Administrator access
+        - label: Cloudflare KV usage
+        - label: Scheduled Worker usage
+        - label: Gemini API usage
+        - label: External API dependency
+        - label: No known security, privacy or cost impact
+
+  - type: textarea
+    id: safety
+    attributes:
+      label: Safety and privacy considerations
+      description: Describe possible risks and how they should be handled.
+      placeholder: |
+        Consider:
+        - Member privacy
+        - Spam or abuse
+        - Administrator permissions
+        - Stored conversation data
+        - Prompt injection
+        - AI hallucinations
+        - External links
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Suggested implementation
+      description: Optional technical ideas, pseudocode or references.
+      placeholder: |
+        Add implementation suggestions, API references or relevant examples.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add screenshots, mockups, examples or other information.
+      placeholder: Add anything else that may help explain the request.
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      options:
+        - label: I would be interested in implementing this feature.
+        - label: I would be interested in helping test this feature.
+        - label: I would be interested in improving the documentation.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Submission checklist
+      options:
+        - label: I searched existing issues and pull requests for similar suggestions.
+          required: true
+        - label: I clearly explained the problem this feature would solve.
+          required: true
+        - label: I considered privacy, security and cost implications.
+          required: true
+        - label: I did not include credentials, private data or production identifiers.
+          required: true
+        - label: This request follows the project's Code of Conduct.
+          required: true
