@@ -1,0 +1,47 @@
+{
+  "name": "a36-milo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Open-source AI community manager for Telegram, built with Cloudflare Workers, Gemini and the Telegram Bot API.",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "wrangler deploy --dry-run --outdir dist",
+    "tail": "wrangler tail"
+  },
+  "keywords": [
+    "telegram",
+    "telegram-bot",
+    "community-manager",
+    "ai-agent",
+    "cloudflare-workers",
+    "cloudflare-kv",
+    "gemini",
+    "community",
+    "open-source",
+    "javascript"
+  ],
+  "author": {
+    "name": "A36 Labs",
+    "url": "https://a36labs.com"
+  },
+  "contributors": [
+    {
+      "name": "Laksh Dilliwal",
+      "url": "https://x.com/LakshDilliwal"
+    }
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A36Labs/a36-milo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/A36Labs/a36-milo/issues"
+  },
+  "homepage": "https://github.com/A36Labs/a36-milo#readme",
+  "devDependencies": {
+    "wrangler": "^4.118.0"
+  }
+}
